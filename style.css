@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "Gotham Book";
+  src: url('assets/Gotham Book Regular.otf');
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('assets/ProximaNova-Regular_0.otf');
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('assets/Proxima Nova Bold.otf');
+}
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url('assets/Proxima Nova Thin.otf');
+}
+@font-face {
+  font-family: "Philosopher";
+  src: url('assets/Philosopher-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+/*---------------------HEADER---------------------*/
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.product-header {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.container {
+  max-width: 95%;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-left {
+  float: left;
+}
+
+.logo {
+  font-size: 2vh;
+}
+
+header .container {
+  text-align: center;
+  margin-top: 1.5vh;
+}
+
+.header-menus {
+  margin: 0 auto 0 auto;
+  display: inline-flex;
+  list-style: none;
+  padding-left: 0px;
+  position: static;
+}
+
+.header-menu {
+  align-items: center;
+  line-height: 30px;
+  font-size: 3vh;
+  font-family: "Gotham Book";
+  margin-right: 20px;
+  opacity: 0.9;
+  padding:0.2vh 1vh;
+}
+
+.header-menu > a {
+  color: #c43b4d;
+  padding:0.2vh 1vh;
+  border-radius: 25px;
+}
+
+.header-menu:hover > a{
+  background-color: rgba(196, 59, 77, 0.8);
+  color: white;
+  text-transform: none;
+}
+
+.products {
+  text-align: center;
+}
+
+.products:hover .products-ol {
+  display: block ruby;
+  padding-left: 0;
+  left: 0;
+}
+
+.products-ol {
+  list-style: none;
+  display: none;
+  position: fixed;
+  top: 6.5vh;
+  width: 100%;
+  text-align: center;
+  font-family: "Gotham Book";
+}
+
+.products-ol li {
+  margin-right: 10px;
+  text-shadow: none;
+}
+
+.products-ol li:hover a {
+  text-shadow: 0 0 10px #ffabb7,0 0 20px #ffabb7,0 0 40px #ffabb7;
+  color: white;
+}
+
+.products-ol li a {
+  color: #c43b4d;
+}
+
+/*---------------------FOOTER---------------------*/
+footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: #c43b4d;
+}
+
+.footer-wrapper{
+  background-color: rgba(237, 237, 239, 0.5);
+  height: 5vh;
+  width: 10%;
+  display: inline-block;
+}
+
+footer .footer-wrapper .container p {
+  line-height: 5vh;
+  font-size: 2.5vh;
+  margin-top: 0;
+  font-family: "Proxima Nova";
+}
+
+/*---------------------INDEX---------------------*/
+
+.scroll-container,
+.scroll-area {
+  width: 100%;
+  height: 100vh;
+  font-size: 60px;
+}
+
+.scroll-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  align-items: center;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.index:nth-of-type(1) {
+  background-image: url(assets/1.png);
+}
+
+.index:nth-of-type(2) {
+  background-image: url(assets/2.jpg);
+}
+
+.index:nth-of-type(3) {
+  background-image: url(assets/3.webp);
+}
+
+.index:nth-of-type(4) {
+  background-image: url(assets/4.jpg);
+}
+
+.index:nth-of-type(5) {
+  background-image: url(assets/5.jpg);
+}
+
+.scroll-area h1 {
+  color: #c43b4d;
+  position: relative;
+  top: 0px;
+  display: block;
+  margin: 10vh auto 0 auto;
+  font-size: 8vh;
+  font-family: "Proxima Nova";
+}
+
+.scroll-area h3 {
+  color: #c43b4d;
+  position: relative;
+  top: 0px;
+  margin: 0 auto 0 auto;
+  display: block;
+  font-size: 3vh;
+  font-family: "Proxima Nova Thin";
+}
+
+.scroll-area a {
+  position: relative;
+  top: 80vh;
+  border-radius: 25px;
+  display: inline-block;
+  width: 18%;
+  font-size: 2.5vh;
+  font-family: "Proxima Nova";
+  padding: 1.3vh 40px;
+  margin: 0 auto;
+}
+
+.order {
+  background-color: rgba(196, 59, 77, 0.6);
+  color: white;
+  margin-right: 40px;
+}
+
+.order:hover {
+  background-color: rgba(196, 59, 77, 1);
+}
+
+.learn {
+  background-color: hsla(0,0%,100%, 0.6);
+  color: #c43b4d;
+}
+
+.learn:hover {
+  background-color: hsla(0,0%,100%, 1);
+}
+
+/*---------------------PRODUCTS---------------------*/
+.product-top-wrapper {
+  background-image: url(assets/product-top2.webp);
+  background-position: 0% 50%;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+}
+
+.desc-wrapper {
+  background-color: #fad0cf;
+  text-align: center;
+  padding: 30px 0;
+  font-family: Philosopher;
+  color: #260202;
+  margin-bottom: 50px;
+}
+
+.desc-wrapper .container h1 {
+  margin: 0 auto;
+  font-size: 6vmin;
+}
+
+.desc-wrapper .container p {
+  font-size: 3vmin;
+  max-width: 40vw;
+  margin:  auto;
+}
+
+.desc-wrapper .container img {
+  width: 50%;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+.desc-wrapper .container a {
+  color: #260202;
+  display: inline-block;
+}
+
+/*---------------------ORDER---------------------*/
+.order-bg {
+  background-image: url(assets/order_bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.order-wrapper {
+  width: 90%;
+  height: 80vh;
+  margin: 11vh 5vw 0 5vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  font-family: Philosopher;
+  color: #260202;
+  padding-top: 50px;
+}
+
+.order-wrapper h1 {
+  font-size: 6vmin;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #260202;
+  width: 30vw;
+  margin: 30px auto 30px auto;
+}
+
+.order-wrapper form {
+  font-family: "Proxima Nova";
+  font-size: 25px;
+  text-align: left;
+  display: inline-block;
+}
+
+.order-wrapper form table tr td label {
+  padding: 20px auto;
+}
+
+.order-wrapper form table tr td select,input{
+  width: 300px;
+  height: 30px;
+}
+
+.submit {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+}
+
+/*---------------------ABOUT---------------------*/
+.about-bg {
+  background-image: url(assets/about-bg.png);
+  background-attachment: fixed;
+}
+
+.about-top-wrapper {
+  background-image: url(assets/about-top.png); 
+  background-size: cover;
+  width: 100%;
+  height: 435px;
+}
+
+.about-content-wrapper {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.bio {
+  text-align: center;
+  padding-right: 30px;
+}
+
+.bio-wrapper {
+  display: inline-block;
+  margin-top: 100px;
+}
+
+.bio-wrapper td {
+  text-align: left;
+}
